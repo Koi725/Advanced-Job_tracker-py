@@ -1,16 +1,8 @@
-# main.py
-
 from auth import *
-
-# from dashboard import run_dashboard
-
-# from utils.color_utils import print_banner
 from dashboard import show_dashboard
 
 
 def main():
-    # print_banner()
-
     while True:
         print("\n🎯 Welcome to Job Tracker!")
         print("1. Log In")
@@ -28,8 +20,6 @@ def main():
             break
         else:
             print("❌ Invalid input. Please try again.")
-    if login_user():
-        show_dashboard()
 
 
 if __name__ == "__main__":

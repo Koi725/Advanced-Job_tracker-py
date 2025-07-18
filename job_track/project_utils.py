@@ -29,7 +29,6 @@ def add_project():
     data = read_project_data()
     existing = data["projects"]
 
-    # Unique ID
     new_id = max([p["id"] for p in existing], default=0) + 1
 
     new_project = {
@@ -48,27 +47,7 @@ def add_project():
     print(f"✅ Project '{title}' added successfully!")
 
 
-def search_project():
-    query = input("Enter project title or ID to search: ").strip().lower()
-    data = read_project_data()
-    user = get_current_user()
-    projects = [p for p in data["projects"] if p["created_by"] == user]
-
-    results = [
-        p for p in projects if query in p["title"].lower() or query == str(p["id"])
-    ]
-
-    if results:
-        print("\n🔍 Search Results:\n")
-        for proj in results:
-            print(
-                f"🆔 {proj['id']} | 📌 {proj['title']} | 📊 {proj['status']} | 🕒 {proj['created_at']}"
-            )
-    else:
-        print("❌ No matching project found.")
-
-
-def mark_project_done():
+def mark_task_done():
     try:
         project_id = int(input("Enter project ID to mark as done: ").strip())
     except ValueError:
@@ -86,6 +65,26 @@ def mark_project_done():
             return
 
     print("❌ Project not found or access denied.")
+
+
+def search_projects():
+    query = input("Enter project title or ID to search: ").strip().lower()
+    data = read_project_data()
+    user = get_current_user()
+    projects = [p for p in data["projects"] if p["created_by"] == user]
+
+    results = [
+        p for p in projects if query in p["title"].lower() or query == str(p["id"])
+    ]
+
+    if results:
+        print("\n🔍 Search Results:\n")
+        for proj in results:
+            print(
+                f"🆔 {proj['id']} | 📌 {proj['title']} | 📊 {proj['status']} | 🕒 {proj['created_at']}"
+            )
+    else:
+        print("❌ No matching project found.")
 
 
 def delete_project():

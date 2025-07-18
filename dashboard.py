@@ -1,4 +1,3 @@
-# dashboard.py
 from settings import change_password, delete_account
 from InquirerPy import inquirer
 from auth import get_current_user
@@ -7,7 +6,6 @@ from job_track.project_utils import (
     add_project,
     mark_task_done,
     search_projects,
-    settings_menu,
 )
 
 
@@ -39,14 +37,6 @@ def show_dashboard():
         elif choice == "search":
             search_projects()
         elif choice == "settings":
-            settings_menu()
-        elif choice == "logout":
-            print("🚪 Logged out.\n")
-            break
-        elif choice == "exit":
-            print("👋 Exiting app.\n")
-            exit()
-        elif choice == "settings":
             settings_choice = inquirer.select(
                 message="⚙️ Settings:",
                 choices=[
@@ -56,9 +46,13 @@ def show_dashboard():
                 ],
             ).execute()
 
-    if settings_choice == "change_pass":
-        change_password()
-    elif settings_choice == "delete_acc":
-        delete_account()
-    else:
-        print("Idk")
+            if settings_choice == "change_pass":
+                change_password()
+            elif settings_choice == "delete_acc":
+                delete_account()
+        elif choice == "logout":
+            print("🚪 Logged out.\n")
+            break
+        elif choice == "exit":
+            print("👋 Exiting app.\n")
+            exit()
