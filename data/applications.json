@@ -1,0 +1,11 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Portfolio Website",
+      "status": "in_progress",
+      "owner": "admin",
+      "created_at": "2025-07-18T14:05:23"
+    }
+  ]
+}

@@ -1,13 +1,15 @@
 # main.py
 
-from auth import register_user, login_user
-from dashboard import run_dashboard
-from utils.color_utils import print_banner
+from auth import *
+
+# from dashboard import run_dashboard
+
+# from utils.color_utils import print_banner
 from dashboard import show_dashboard
 
 
 def main():
-    print_banner()
+    # print_banner()
 
     while True:
         print("\n🎯 Welcome to Job Tracker!")
@@ -18,7 +20,7 @@ def main():
 
         if choice == "1":
             if login_user():
-                run_dashboard()
+                show_dashboard()
         elif choice == "2":
             register_user()
         elif choice == "3":

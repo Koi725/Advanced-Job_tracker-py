@@ -1,5 +1,14 @@
+# dashboard.py
+
 from InquirerPy import inquirer
 from auth import get_current_user
+from job_track.project_utils import (
+    view_all_projects,
+    add_project,
+    mark_task_done,
+    search_projects,
+    settings_menu,
+)
 
 
 def show_dashboard():
@@ -22,23 +31,18 @@ def show_dashboard():
         ).execute()
 
         if choice == "view_projects":
-            print("📁 Listing projects...")
-            # TODO: call your function
+            view_all_projects()
         elif choice == "add_project":
-            print("➕ Creating project...")
-            # TODO
+            add_project()
         elif choice == "mark_done":
-            print("✅ Marking task done...")
-            # TODO
+            mark_task_done()
         elif choice == "search":
-            print("🔍 Searching...")
-            # TODO
+            search_projects()
         elif choice == "settings":
-            print("⚙️ Settings panel...")
-            # TODO
+            settings_menu()
         elif choice == "logout":
-            print("🚪 Logged out.")
+            print("🚪 Logged out.\n")
             break
         elif choice == "exit":
-            print("👋 Exiting app.")
+            print("👋 Exiting app.\n")
             exit()
