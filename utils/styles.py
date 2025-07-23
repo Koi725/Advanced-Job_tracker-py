@@ -27,3 +27,24 @@ DIVIDER = Fore.WHITE + DIM
 # Example usage:
 # print(SUCCESS + "✔ Successfully saved!" + RESET)
 # print(TITLE + "🔍 Job Analysis Results" + RESET)
+# utils/styles.py
+
+from colorama import Fore, Style, init
+
+init(autoreset=True)
+
+
+def print_error(text: str):
+    print(f"{Fore.RED}[×] {text}{Style.RESET_ALL}")
+
+
+def print_success(text: str):
+    print(f"{Fore.GREEN}[✓] {text}{Style.RESET_ALL}")
+
+
+def print_info(text: str):
+    print(f"{Fore.CYAN}• {text}{Style.RESET_ALL}")
+
+
+def print_title(text: str):
+    print(f"{Fore.YELLOW}{Style.BRIGHT}{text}{Style.RESET_ALL}")
