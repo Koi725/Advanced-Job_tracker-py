@@ -29,6 +29,7 @@ def register_user():
     users[username] = {
         "password": encrypted_password,
         "skills": [tag.strip() for tag in skill_tags.split(",") if tag.strip()],
+        "role": "user",
     }
 
     save_users(users)
@@ -56,4 +57,9 @@ def login_user():
 
     print_success("✅ Login successful!")
     log_info(f"User logged in: {username}")
-    return {"username": username, "skills": users[username]["skills"]}
+
+    return {
+        "username": username,
+        "skills": users[username]["skills"],
+        "role": users[username].get("role", "user"),
+    }

@@ -1,1 +1,22 @@
 2025-07-23 14:53:50,967 - WARNING - Weak password attempt for username: hasan
+2025-07-23 15:13:33,013 - ERROR - Login failed: user 'kousha' not found.
+2025-07-23 15:14:09,239 - INFO - User registered: hasan
+2025-07-23 15:14:34,220 - ERROR - Login failed: user 'Hasan' not found.
+2025-07-23 15:29:10,077 - INFO - User logged in: Admin
+2025-07-23 15:29:45,822 - ERROR - Login failed: user 'kousha' not found.
+2025-07-23 15:30:13,637 - INFO - User logged in: Kousha
+2025-07-23 15:32:56,637 - ERROR - Login failed: incorrect password for user 'Admin'
+2025-07-23 15:33:04,946 - INFO - User logged in: Admin
+2025-07-23 15:38:46,563 - INFO - User logged in: Admin
+2025-07-23 15:39:22,235 - INFO - User logged in: Kousha
+2025-07-23 15:50:18,182 - INFO - User registered: Kousha
+2025-07-23 15:50:29,956 - INFO - User logged in: Kousha
+2025-07-23 15:51:01,339 - INFO - User logged in: Admin
+2025-07-23 15:54:30,825 - INFO - User registered: Kousha
+2025-07-23 15:54:40,711 - INFO - User logged in: Kousha
+2025-07-23 15:55:11,467 - INFO - User logged in: Admin
+2025-07-23 15:57:28,202 - INFO - User registered: Kousha
+2025-07-23 15:57:47,549 - INFO - User logged in: Admin
+2025-07-23 15:59:10,819 - INFO - User registered: Kousha
+2025-07-23 15:59:24,877 - INFO - User logged in: Admin
+2025-07-23 16:00:46,633 - INFO - User logged in: Admin
