@@ -3,6 +3,8 @@
 from utils.styles import print_title, print_info, print_success, print_error
 from core.user.edit_profile import edit_profile
 from core.user.job_search_engine import search_jobs
+from core.user.view_saved_jobs import view_saved_jobs
+from core.user.edit_saved_jobs import edit_saved_jobs
 
 
 def user_dashboard(user_data):
@@ -24,9 +26,9 @@ def user_dashboard(user_data):
         elif choice == "2":
             edit_profile(user_data)
         elif choice == "3":
-            view_jobs(user_data)
+            view_saved_jobs(user_data)
         elif choice == "4":
-            edit_jobs(user_data)
+            edit_saved_jobs(user_data)
         elif choice == "5":
             search_jobs(user_data)
         elif choice == "6":
