@@ -1,7 +1,8 @@
 # core/admin/delete_job.py
 
-import json
 import os
+import json
+from utils.crypto import get_res_cipher
 from utils.styles import print_title, print_info, print_success, print_error
 from utils.logger import log_warning
 
@@ -16,10 +17,13 @@ def delete_job():
         return
 
     try:
-        with open(RES_FILE, "r", encoding="utf-8") as file:
-            job_data = json.load(file)
+        with open(RES_FILE, "rb") as file:
+            encrypted = file.read()
+            cipher = get_res_cipher()
+            decrypted = cipher.decrypt(encrypted).decode("utf-8")
+            job_data = json.loads(decrypted)
     except Exception:
-        print_error("❌ Failed to load job data.")
+        print_error("❌ Failed to load or decrypt job data.")
         return
 
     if not job_data:
@@ -47,11 +51,16 @@ def delete_job():
 
     deleted_job = job_data[username].pop(choice - 1)
 
-    # Save updated data
-    with open(RES_FILE, "w", encoding="utf-8") as file:
-        json.dump(job_data, file, indent=4)
+    try:
+        # Re-encrypt and save updated data
+        new_raw = json.dumps(job_data, indent=4)
+        new_encrypted = cipher.encrypt(new_raw.encode("utf-8"))
+        with open(RES_FILE, "wb") as file:
+            file.write(new_encrypted)
 
-    print_success(
-        f"✅ Deleted job: {deleted_job.get('title')} at {deleted_job.get('company')}"
-    )
-    log_warning(f"Admin deleted a job for user: {username}")
+        print_success(
+            f"✅ Deleted job: {deleted_job.get('title')} at {deleted_job.get('company')}"
+        )
+        log_warning(f"Admin deleted a job for user: {username}")
+    except Exception:
+        print_error("❌ Failed to save updated job data.")

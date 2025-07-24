@@ -1,7 +1,8 @@
 # core/admin/view_jobs.py
 
-import json
 import os
+import json
+from utils.crypto import get_res_cipher
 from utils.styles import print_title, print_info, print_success, print_error
 
 RES_FILE = "data/res.json"
@@ -11,18 +12,21 @@ def view_all_jobs():
     print_title("\n📄 All Saved Jobs from All Users:\n")
 
     if not os.path.exists(RES_FILE):
-        print_error("No job data file found.")
+        print_error("❌ No job data file found.")
         return
 
-    with open(RES_FILE, "r", encoding="utf-8") as file:
-        try:
-            job_data = json.load(file)
-        except Exception:
-            print_error("Failed to read job data.")
-            return
+    try:
+        with open(RES_FILE, "rb") as file:
+            encrypted = file.read()
+            cipher = get_res_cipher()
+            decrypted = cipher.decrypt(encrypted).decode("utf-8")
+            job_data = json.loads(decrypted)
+    except Exception as e:
+        print_error("❌ Failed to read or decrypt job data.")
+        return
 
     if not job_data:
-        print_error("No jobs found.")
+        print_error("❌ No jobs found.")
         return
 
     for username, jobs in job_data.items():
