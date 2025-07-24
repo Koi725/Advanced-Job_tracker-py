@@ -2,6 +2,7 @@
 
 from utils.styles import print_title, print_info, print_success, print_error
 from core.admin.view_users import view_all_users
+from core.admin.view_jobs import view_all_jobs
 from core.admin.delete_user import delete_user
 from core.admin.delete_job import delete_job
 from core.admin.export_data import export_user_data
@@ -22,7 +23,7 @@ def admin_dashboard(user_data):  # ✅ ورودی اضافه شد
         if choice == "1":
             view_all_users()
         elif choice == "2":
-            print_success("[ADMIN] View All Jobs - Coming soon")
+            view_all_jobs()
         elif choice == "3":
             delete_user()
         elif choice == "4":

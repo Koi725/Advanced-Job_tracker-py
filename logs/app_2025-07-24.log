@@ -29,3 +29,8 @@
 2025-07-24 12:03:13,501 - INFO - User Hasan viewed 7 saved jobs.
 2025-07-24 12:03:28,003 - INFO - User Hasan deleted a saved job.
 2025-07-24 12:03:45,600 - INFO - User logged in: Admin
+2025-07-24 12:04:55,909 - WARNING - Attempted to delete non-existent user: 1
+2025-07-24 12:05:09,156 - WARNING - Attempted to delete non-existent user: kousha
+2025-07-24 12:05:21,036 - WARNING - Admin deleted user: Kousha
+2025-07-24 12:05:25,776 - WARNING - Attempted to delete non-existent user: 
+2025-07-24 12:08:03,455 - INFO - User logged in: Admin
