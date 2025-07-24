@@ -48,3 +48,4 @@ def edit_profile(user_data):
         return
 
     save_users(users)
+    user_data.update(users[username])
