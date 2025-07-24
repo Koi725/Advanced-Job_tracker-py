@@ -4,7 +4,6 @@ import json
 from cryptography.fernet import Fernet
 import os
 
-# مسیر فایل کاربران و کلید رمزنگاری
 USER_FILE = "data/users.json"
 KEY_FILE = "data/user_file.key"
 

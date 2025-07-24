@@ -8,7 +8,7 @@ from core.admin.delete_job import delete_job
 from core.admin.export_data import export_user_data
 
 
-def admin_dashboard(user_data):  # ✅ ورودی اضافه شد
+def admin_dashboard(user_data):
     while True:
         print_title("\n🛠️ Admin Dashboard")
         print_info("1. View All Users")

@@ -211,7 +211,7 @@ import datetime
 from auth.auth_utils import get_cipher
 from utils.styles import print_title, print_info, print_success, print_error
 from utils.logger import log_info
-from utils.crypto import get_res_cipher  # ✅ استفاده از فایل crypto.py
+from utils.crypto import get_res_cipher
 
 RES_FILE = "data/res.json"
 

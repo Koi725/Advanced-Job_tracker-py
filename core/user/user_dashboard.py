@@ -50,13 +50,13 @@ def view_profile(user_data):
         print_error("No skills found.")
 
 
-def view_jobs(user_data):
-    print_info("📄 [VIEW JOBS] Function to be implemented.")
+# def view_jobs(user_data):
+#     print_info("📄 [VIEW JOBS] Function to be implemented.")
 
 
-def edit_jobs(user_data):
-    print_info("🛠️ [EDIT JOBS] Function to be implemented.")
+# def edit_jobs(user_data):
+#     print_info("🛠️ [EDIT JOBS] Function to be implemented.")
 
 
-def start_job_search(user_data):
-    print_info("🔍 [START SEARCH] Function to be implemented.")
+# def start_job_search(user_data):
+#     print_info("🔍 [START SEARCH] Function to be implemented.")
