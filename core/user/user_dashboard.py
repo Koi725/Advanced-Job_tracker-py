@@ -1,6 +1,7 @@
 # core/user_dashboard.py
 
 from utils.styles import print_title, print_info, print_success, print_error
+from core.user.edit_profile import edit_profile
 
 
 def user_dashboard(user_data):
@@ -44,10 +45,6 @@ def view_profile(user_data):
             print(f"   - {skill}")
     else:
         print_error("No skills found.")
-
-
-def edit_profile(user_data):
-    print_info("✏️ [EDIT PROFILE] Function to be implemented.")
 
 
 def view_jobs(user_data):
