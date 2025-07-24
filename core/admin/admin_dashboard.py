@@ -1,6 +1,7 @@
 # core/admin/admin_dashboard.py
 
 from utils.styles import print_title, print_info, print_success, print_error
+from core.admin.view_users import view_all_users
 
 
 def admin_dashboard(user_data):  # ✅ ورودی اضافه شد
@@ -16,7 +17,7 @@ def admin_dashboard(user_data):  # ✅ ورودی اضافه شد
         choice = input("\nChoose an option: ").strip()
 
         if choice == "1":
-            print_success("[ADMIN] View All Users - Coming soon")
+            view_all_users()
         elif choice == "2":
             print_success("[ADMIN] View All Jobs - Coming soon")
         elif choice == "3":
