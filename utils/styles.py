@@ -2,7 +2,6 @@
 
 from colorama import Style, Fore
 
-# Basic Styles
 RESET = Style.RESET_ALL
 BOLD = Style.BRIGHT
 DIM = Style.DIM
