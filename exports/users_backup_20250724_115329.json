@@ -1,0 +1,38 @@
+{
+    "Kousha": {
+        "password": "gAAAAABogPi7FJhcDqJ17MvZgN7wmaFhhroZ436jSDFyGUPg8mBShAhBJD4FFuhqNIMLz6RSip8QJuVZB1rS6USUFU1CtDt6Bg==",
+        "skills": [
+            "Front-End"
+        ],
+        "role": "user"
+    },
+    "Admin": {
+        "password": "gAAAAABogPjDhJBKc9dGzvGwFYTeW7D9shvo1ZrLFpaNhyYDwOHBB2RTO7BO5-uR1FnXQsIiLPzW_rSzYbRdlmZYfL6HKRl8WQ==",
+        "skills": [
+            "admin"
+        ],
+        "role": "admin"
+    },
+    "Hasan": {
+        "password": "gAAAAABoggf_l31BqZ_vhJrWW5tNoPX-77S6nRCE6-2HlDlq731ebJ5YEqUgErT9KcLWSfZflamdMLpLCXn7eVw03KNBLta8Jg==",
+        "skills": [
+            "Full-Stack",
+            "Front-End",
+            "Programmer",
+            "Back-End",
+            "Developer",
+            "JS",
+            "Py"
+        ],
+        "role": "user"
+    },
+    "Zahra": {
+        "password": "gAAAAABogg686TDHtXq-pyGvnfazqodj3U2D2O2Box8IjON_rTCrBZL2D5c0IndW5rJjoMkwBrbaLyzqH_mOsgWp1tsg_zRUTw==",
+        "skills": [
+            "Accountant",
+            "administrative",
+            "accountant assistant"
+        ],
+        "role": "user"
+    }
+}

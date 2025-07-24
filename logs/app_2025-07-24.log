@@ -1,2 +1,22 @@
 2025-07-24 10:44:22,274 - INFO - User logged in: Admin
 2025-07-24 10:54:20,122 - INFO - User logged in: Kousha
+2025-07-24 11:13:48,218 - INFO - User logged in: Kousha
+2025-07-24 11:14:43,678 - INFO - User logged in: Kousha
+2025-07-24 11:15:39,507 - INFO - User Kousha updated their skills.
+2025-07-24 11:15:47,967 - INFO - User Kousha updated their skills.
+2025-07-24 11:16:21,510 - ERROR - Login failed: user 'Hasan' not found.
+2025-07-24 11:17:11,868 - INFO - User registered: Hasan
+2025-07-24 11:17:20,434 - INFO - User logged in: Hasan
+2025-07-24 11:33:37,238 - INFO - User logged in: Hasan
+2025-07-24 11:39:12,059 - ERROR - Login failed: user 'Hasani' not found.
+2025-07-24 11:39:19,857 - INFO - User logged in: Hasan
+2025-07-24 11:39:34,621 - INFO - Saved 7 jobs to Hasan_jobs_2025-07-24.txt.
+2025-07-24 11:39:34,621 - INFO - User Hasan saved 7 jobs from search.
+2025-07-24 11:42:14,904 - INFO - User logged in: Kousha
+2025-07-24 11:42:47,427 - INFO - User logged in: Hasan
+2025-07-24 11:46:18,461 - INFO - User registered: Zahra
+2025-07-24 11:46:29,230 - INFO - User logged in: Zahra
+2025-07-24 11:47:15,404 - INFO - Saved 2 jobs to Zahra_jobs_2025-07-24.txt.
+2025-07-24 11:47:15,404 - INFO - User Zahra saved 2 jobs from search.
+2025-07-24 11:53:08,692 - INFO - User logged in: Admin
+2025-07-24 11:53:21,427 - WARNING - Attempted to delete non-existent user: 

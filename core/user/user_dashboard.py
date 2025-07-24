@@ -2,6 +2,7 @@
 
 from utils.styles import print_title, print_info, print_success, print_error
 from core.user.edit_profile import edit_profile
+from core.user.job_search_engine import search_jobs
 
 
 def user_dashboard(user_data):
@@ -27,7 +28,7 @@ def user_dashboard(user_data):
         elif choice == "4":
             edit_jobs(user_data)
         elif choice == "5":
-            start_job_search(user_data)
+            search_jobs(user_data)
         elif choice == "6":
             print_success("Logging out...")
             break
